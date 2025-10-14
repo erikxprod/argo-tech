@@ -1,0 +1,98 @@
+Buat sebuah website landing page penjualan mesin pertanian yang responsive, berdesain modern & profesional, dan memiliki fungsi cart. Spesifikasi detail:
+
+Fungsional & behavior
+
+Halaman tunggal (landing) yang memuat hero, fitur produk, katalog produk (grid), testimoni, garansi/layanan, FAQ, dan footer dengan kontak.
+
+Tampilan harus responsif (desktop / tablet / mobile) — gunakan layout grid fleksibel dan breakpoint umum.
+
+Setiap produk memiliki: gambar, nama, tipe, deskripsi singkat, spesifikasi singkat (daya/kapasitas), harga, dan tombol Tambah ke Keranjang.
+
+Cart ter-implementasi client-side:
+
+Semua data cart disimpan ke localStorage sehingga tersisa setelah reload.
+
+Di cart, user bisa: tambah/kurangi kuantitas, hapus item, lihat subtotal per item & total, clear cart.
+
+Berikan validasi (stok minimal 1, kuantitas integer, harga positif).
+
+Ketika user klik Checkout / Kirim Pesanan, halaman harus:
+
+Menyusun ringkasan order (nama produk, qty, subtotal, total).
+
+Menyediakan tombol Kirim via WhatsApp (buka wa.me/wa.link dengan teks pesan terformat).
+
+Menyediakan tombol Kirim Email ke Owner (mailto: dengan subject & body yang terisi; juga sediakan fallback agar data dikirim ke endpoint owner lewat fetch POST jika tersedia).
+
+Pesan WhatsApp & Email mengandung: nama toko, tanggal (ISO), daftar item (nama, qty, harga satuan, subtotal), total, nama & nomor kontak pembeli (jika user isi form), alamat (opsional), catatan pembeli.
+
+Implementasi harus menggunakan HTML5, CSS modern (Tailwind atau custom CSS + utility classes), dan JavaScript vanilla atau framework ringan (React/Vue) — sebutkan pilihan. Jika memilih framework, sertakan build step singkat (npm install & npm run dev/build).
+
+UI/UX: tombol jelas, kontras baik, ikon checkout/cart, animasi ringan saat tambah ke cart (toast/mini animation). Aksesibilitas dasar: tombol bisa dipanggil via keyboard, alt text untuk gambar, warna kontras cukup.
+
+Sertakan dokumentasi singkat: struktur file, cara running lokal, dan cara mengubah email/nomor WA owner.
+
+Teknis — localStorage & format pesan (contoh)
+
+localStorage key: agri_cart_v1
+
+Struktur data:
+
+{
+  "items": [
+    {
+      "id": "P001",
+      "name": "Mesin Pemanen X100",
+      "price": 12500000,
+      "qty": 2,
+      "image": "/assets/p001.jpg"
+    }
+  ],
+  "currency": "IDR",
+  "updatedAt": "2025-10-14T08:00:00.000Z"
+}
+
+
+Template teks WhatsApp (URL encoded):
+
+Halo, saya ingin memesan:
+Toko: [NAMA_TOKO]
+Tanggal: [TANGGAL_ISO]
+
+Items:
+1) Mesin Pemanen X100 — Qty: 2 — Harga: Rp12.500.000 — Subtotal: Rp25.000.000
+...
+Total: Rp25.000.000
+
+Nama Pembeli: [NAMA_PEMBELI]
+No. HP: [NO_HP]
+Alamat: [ALAMAT]
+Catatan: [CATATAN]
+
+Mohon konfirmasi ketersediaan & cara pembayaran. Terima kasih.
+
+
+Contoh mailto:
+
+mailto:owner@contoh.com?subject=Pesanan%20Mesin%20Pertanian%20dari%20[NAMA_PEMBELI]&body=[BODY_TERFORMAT]
+
+
+Acceptance criteria (yang harus dipenuhi)
+
+Menambahkan produk ke cart tersimpan di localStorage dan tetap ada setelah reload.
+
+Bisa ubah qty & hapus item; total terupdate otomatis.
+
+Tombol WA membuka chat dengan pesan ter-format lengkap.
+
+Tombol Email membuka client email default dengan subject & body terisi.
+
+Layout responsif dan terlihat modern di mobile & desktop.
+
+Sertakan README singkat untuk mengganti nomor WA & email owner.
+
+Preferensi teknologi (pilih salah satu)
+
+Option A (cepat): HTML + TailwindCSS + Vanilla JS.
+
+Option B (skala lebih besar): React + Tailwind + Vite, gunakan Context/localStorage hook untuk cart.
