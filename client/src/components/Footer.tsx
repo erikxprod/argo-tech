@@ -28,14 +28,14 @@ export default function Footer() {
             <ul className="space-y-3 text-muted-foreground">
               <li className="flex items-start gap-2">
                 <Phone className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                <a href="https://wa.me/6281234567890" className="hover:text-primary" data-testid="link-footer-phone">
-                  +62 812-3456-7890
+                <a href="https://wa.me/62895414357400" className="hover:text-primary" data-testid="link-footer-phone">
+                  +62 895-4143-57400
                 </a>
               </li>
               <li className="flex items-start gap-2">
                 <Mail className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                <a href="mailto:owner@agromesin.com" className="hover:text-primary" data-testid="link-footer-email">
-                  owner@agromesin.com
+                <a href="mailto:candrasuryapermana79@gmail.com" className="hover:text-primary" data-testid="link-footer-email">
+                  candrasuryapermana79@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-2">

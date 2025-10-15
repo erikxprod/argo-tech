@@ -16,8 +16,8 @@ interface CheckoutModalProps {
   onOpenChange: (open: boolean) => void;
 }
 
-const OWNER_PHONE = '6281234567890';
-const OWNER_EMAIL = 'owner@agromesin.com';
+const OWNER_PHONE = '62895414357400';
+const OWNER_EMAIL = 'candrasuryapermana79@gmail.com';
 
 export default function CheckoutModal({ open, onOpenChange }: CheckoutModalProps) {
   const { items, total } = useCart();

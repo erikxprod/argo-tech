@@ -52,22 +52,22 @@ npm run dev
 Edit file `client/src/components/CheckoutModal.tsx`:
 
 ```typescript
-const OWNER_PHONE = '6281234567890';  // Ganti dengan nomor WhatsApp Anda (format internasional)
+const OWNER_PHONE = '62895414357400';  // Ganti dengan nomor WhatsApp Anda (format internasional)
 ```
 
 Juga edit di `client/src/components/Hero.tsx` untuk tombol "Hubungi Kami":
 
 ```typescript
 const openWhatsApp = () => {
-  window.open('https://wa.me/6281234567890', '_blank');  // Ganti nomor di sini
+  window.open('https://wa.me/62895414357400', '_blank');  // Ganti nomor di sini
 };
 ```
 
 Dan di `client/src/components/Footer.tsx`:
 
 ```typescript
-<a href="https://wa.me/6281234567890" ...>  // Ganti nomor di sini
-  +62 812-3456-7890
+<a href="https://wa.me/62895414357400" ...>  // Ganti nomor di sini
+  +62 895-4143-57400
 </a>
 ```
 
@@ -76,14 +76,14 @@ Dan di `client/src/components/Footer.tsx`:
 Edit file `client/src/components/CheckoutModal.tsx`:
 
 ```typescript
-const OWNER_EMAIL = 'owner@agromesin.com';  // Ganti dengan email Anda
+const OWNER_EMAIL = 'candrasuryapermana79@gmail.com';  // Ganti dengan email Anda
 ```
 
 Dan di `client/src/components/Footer.tsx`:
 
 ```typescript
-<a href="mailto:owner@agromesin.com" ...>  // Ganti email di sini
-  owner@agromesin.com
+<a href="mailto:candrasuryapermana79@gmail.com" ...>  // Ganti email di sini
+  candrasuryapermana79@gmail.com
 </a>
 ```
 
